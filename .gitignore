@@ -10,8 +10,9 @@
 .svn/
 migrate_working_dir/
 .opencode/
-.specify/
+.specify/**
 .claude/
+specs/
 
 # IntelliJ related
 *.iml
