@@ -7,10 +7,7 @@ class AccessibilityConfig {
     this.highContrast = false,
   });
 
-  AccessibilityConfig copyWith({
-    double? textScaleFactor,
-    bool? highContrast,
-  }) {
+  AccessibilityConfig copyWith({double? textScaleFactor, bool? highContrast}) {
     return AccessibilityConfig(
       textScaleFactor: textScaleFactor ?? this.textScaleFactor,
       highContrast: highContrast ?? this.highContrast,

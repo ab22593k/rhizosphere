@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rhizosphere/rhizosphere.dart';
+import 'settings_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -22,7 +23,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Rhizosphere Demo')),
+      appBar: AppBar(
+        title: const Text('Rhizosphere Demo'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            tooltip: 'Settings',
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
+            },
+          ),
+        ],
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -41,6 +55,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 label: 'Press Me',
                 semanticLabel: 'Announce time',
                 onPressed: _announce,
+              ),
+              const SizedBox(height: 20),
+              GestureHandler(
+                onTap: _announce,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.blue.shade100,
+                  alignment: Alignment.center,
+                  child: const Text('Swipe/Hold Me'),
+                ),
               ),
               const SizedBox(height: 20),
               if (_announcement.isNotEmpty)

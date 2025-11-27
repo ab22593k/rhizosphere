@@ -14,9 +14,13 @@ class AccessibleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      child: Text(label, semanticsLabel: semanticLabel),
+    return ConstrainedBox(
+      constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(minimumSize: const Size(48, 48)),
+        child: Text(label, semanticsLabel: semanticLabel),
+      ),
     );
   }
 }

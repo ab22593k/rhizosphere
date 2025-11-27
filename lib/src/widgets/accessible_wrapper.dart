@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../config/text_scaler.dart';
 import '../providers/theme_provider.dart';
 
 class AccessibleWrapper extends ConsumerWidget {
@@ -13,7 +14,7 @@ class AccessibleWrapper extends ConsumerWidget {
 
     return MediaQuery(
       data: MediaQuery.of(context).copyWith(
-        textScaler: TextScaler.linear(config.textScaleFactor),
+        textScaler: AppTextScaler.fromScale(config.textScaleFactor),
         highContrast: config.highContrast,
       ),
       child: child,

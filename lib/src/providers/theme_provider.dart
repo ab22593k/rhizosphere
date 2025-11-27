@@ -22,5 +22,5 @@ class AccessibilityNotifier extends Notifier<AccessibilityConfig> {
 
 final accessibilityProvider =
     NotifierProvider<AccessibilityNotifier, AccessibilityConfig>(() {
-  return AccessibilityNotifier();
-});
+      return AccessibilityNotifier();
+    });

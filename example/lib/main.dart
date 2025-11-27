@@ -7,17 +7,22 @@ void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final config = ref.watch(accessibilityProvider);
+
+    final baseScheme = ColorScheme.fromSeed(seedColor: Colors.deepPurple);
+
+    final effectiveScheme = config.highContrast
+        ? const ColorScheme.highContrastLight(primary: Colors.deepPurple)
+        : baseScheme;
+
     return MaterialApp(
       title: 'Rhizosphere Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(colorScheme: effectiveScheme, useMaterial3: true),
       builder: (context, child) {
         return AccessibleWrapper(child: child!);
       },

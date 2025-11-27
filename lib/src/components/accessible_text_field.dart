@@ -16,10 +16,7 @@ class AccessibleTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
-      decoration: InputDecoration(
-        labelText: label,
-        hintText: hint,
-      ),
+      decoration: InputDecoration(labelText: label, hintText: hint),
     );
   }
 }
