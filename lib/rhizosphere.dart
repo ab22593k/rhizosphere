@@ -40,3 +40,14 @@ export 'accessible_widgets/utils/accessibility_extensions.dart';
 export 'accessible_widgets/utils/contrast_checker.dart';
 export 'accessible_widgets/utils/truncation_handler.dart';
 export 'accessible_widgets/utils/accessibility_helpers.dart';
+
+// Adaptive Layout System
+export 'core/adaptive/layout/window_size_class.dart';
+export 'core/adaptive/layout/adaptive_builder.dart';
+export 'core/adaptive/layout/navigation_strategy.dart';
+export 'core/adaptive/layout/pane_configuration.dart';
+export 'core/adaptive/components/adaptive_fab.dart';
+export 'core/adaptive/components/adaptive_app_bar.dart';
+export 'features/adaptive_layout/views/adaptive_scaffold.dart';
+export 'features/adaptive_layout/widgets/responsive_pane.dart';
+export 'features/adaptive_layout/providers/adaptive_layout_provider.dart';
