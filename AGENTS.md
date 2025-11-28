@@ -918,3 +918,10 @@ This methodology enforces a proactive approach to design, ensuring that systems 
   1.  **Capture:** Systematically log "friction points" (e.g., frequent "undo" actions, rage clicks, or feature abandonment).
   2.  **Analyze:** specific deviations to understand the unmet need or the gap in the "User Spectrum."
   3.  **Adapt:** Use this feedback to fundamentally refine the system model, ensuring the software evolves to meet the reality of its usage rather than forcing users to conform to the software.
+
+## Active Technologies
+- Dart with Flutter 3.10+ (current stable) + flutter_screenutil (optional for responsive units), accessibility_tools (for dev-time checks), flutter_riverpod (existing in project) (001-image-alt-text-scaling)
+- N/A (UI component library) (001-image-alt-text-scaling)
+
+## Recent Changes
+- 001-image-alt-text-scaling: Added Dart with Flutter 3.10+ (current stable) + flutter_screenutil (optional for responsive units), accessibility_tools (for dev-time checks), flutter_riverpod (existing in project)

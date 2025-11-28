@@ -4,7 +4,7 @@ linter:
   rules:
     avoid_print: false
     prefer_single_quotes: true
-
-
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
+    # Added for accessibility and quality
+    always_declare_return_types: true
+    camel_case_types: true
+    annotate_overrides: true

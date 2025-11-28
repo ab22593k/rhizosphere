@@ -29,3 +29,14 @@ export 'views/hierarchy_view.dart';
 export 'views/shortcuts_help_view.dart';
 export 'views/components/accessible_header.dart';
 export 'views/components/accessible_card.dart';
+
+// New Accessible Widgets Exports
+export 'accessible_widgets/accessible_image.dart';
+export 'accessible_widgets/accessible_text.dart';
+export 'accessible_widgets/expandable_truncated_text.dart';
+export 'accessible_widgets/dynamic_tooltip_label.dart';
+export 'accessible_widgets/image_caption.dart';
+export 'accessible_widgets/utils/accessibility_extensions.dart';
+export 'accessible_widgets/utils/contrast_checker.dart';
+export 'accessible_widgets/utils/truncation_handler.dart';
+export 'accessible_widgets/utils/accessibility_helpers.dart';

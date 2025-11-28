@@ -7,11 +7,16 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  accessibility_tools: ^2.8.0
   flutter:
     sdk: flutter
   flutter_riverpod: ^3.0.3
+  flutter_screenutil: ^5.9.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
