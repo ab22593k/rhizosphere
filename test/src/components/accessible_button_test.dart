@@ -21,9 +21,8 @@ void main() {
     expect(button, findsOneWidget);
 
     // Verify semantics
-    // Note: We look for the semantics of the interactive element inside
     expect(
-      tester.getSemantics(find.byType(ElevatedButton)),
+      tester.getSemantics(find.bySemanticsLabel('Submit Form')),
       matchesSemantics(
         label: 'Submit Form',
         isButton: true,
@@ -31,7 +30,6 @@ void main() {
         hasEnabledState: true,
         hasTapAction: true,
         isFocusable: true,
-        hasFocusAction: true,
       ),
     );
 

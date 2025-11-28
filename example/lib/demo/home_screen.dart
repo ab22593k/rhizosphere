@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rhizosphere/rhizosphere.dart';
+import 'full_assistive_demo.dart';
 import 'settings_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -38,7 +39,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         ],
       ),
       body: Center(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -62,9 +63,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 child: Container(
                   width: 100,
                   height: 100,
-                  color: Colors.blue.shade100,
+                  color: Theme.of(context).colorScheme.secondaryContainer,
                   alignment: Alignment.center,
-                  child: const Text('Swipe/Hold Me'),
+                  child: Text(
+                    'Swipe/Hold Me',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onSecondaryContainer,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -73,6 +80,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   message: _announcement,
                   child: Text(_announcement),
                 ),
+              const SizedBox(height: 40),
+              Divider(color: Theme.of(context).dividerColor),
+              const SizedBox(height: 20),
+              AccessibleButton(
+                label: 'Open Full Demo',
+                semanticLabel: 'Navigate to Full Assistive Technology Demo',
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const FullAssistiveDemo(),
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
