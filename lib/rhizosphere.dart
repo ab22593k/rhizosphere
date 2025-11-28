@@ -1,3 +1,15 @@
+/// Rhizosphere: An accessible Flutter component library.
+///
+/// This library follows Flutter best practices for accessibility:
+/// - Semantics: Uses `Semantics` widget for labels, headers, and descriptions.
+/// - Hierarchy: Uses `Semantics(header: true)` and Landmarks via `container: true`.
+/// - Reading Order: Ensures top-down logical flow.
+/// - Focus: Manages `FocusNode` and `FocusScope` for keyboard/switch navigation.
+/// - Contrast: Default theme meets WCAG AA (4.5:1 / 3:1).
+/// - Target Sizes: Enforces 48x48dp touch targets.
+/// - Shortcuts: Implements keyboard shortcuts using `Shortcuts` and `Actions`.
+library;
+
 export 'src/config/accessibility_config.dart';
 export 'src/config/text_scaler.dart';
 export 'src/providers/theme_provider.dart';
@@ -6,3 +18,14 @@ export 'src/widgets/live_announcer.dart';
 export 'src/components/accessible_button.dart';
 export 'src/components/accessible_text_field.dart';
 export 'src/components/gesture_handler.dart';
+
+// New Accessibility Hierarchy Exports
+export 'models/app_theme.dart';
+export 'models/navigation_item.dart';
+export 'models/intents.dart';
+export 'viewmodels/accessibility_viewmodel.dart';
+export 'views/base_layout.dart';
+export 'views/hierarchy_view.dart';
+export 'views/shortcuts_help_view.dart';
+export 'views/components/accessible_header.dart';
+export 'views/components/accessible_card.dart';

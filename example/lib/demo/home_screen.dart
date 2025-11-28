@@ -94,6 +94,40 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   );
                 },
               ),
+              const SizedBox(height: 20),
+              AccessibleButton(
+                label: 'Open Hierarchy Demo',
+                semanticLabel:
+                    'Navigate to Accessible Hierarchy Navigation Demo',
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => HierarchyView(
+                        items: const [
+                          NavigationItem(
+                            id: '1',
+                            title: 'Accessibility',
+                            description: 'Learn about a11y features',
+                            route: '/a11y',
+                          ),
+                          NavigationItem(
+                            id: '2',
+                            title: 'Components',
+                            description: 'View accessible widgets',
+                            route: '/components',
+                          ),
+                          NavigationItem(
+                            id: '3',
+                            title: 'Settings',
+                            description: 'Adjust app preferences',
+                            route: '/settings',
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
