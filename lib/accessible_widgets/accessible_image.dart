@@ -3,7 +3,7 @@ import 'package:rhizosphere/accessible_widgets/image_caption.dart';
 
 class AccessibleImage extends StatelessWidget {
   final ImageProvider image;
-  final String altText;
+  final String semanticsLabel;
   final String? caption;
   final bool isDecorative;
   final double? width;
@@ -15,7 +15,7 @@ class AccessibleImage extends StatelessWidget {
   const AccessibleImage({
     super.key,
     required this.image,
-    this.altText = '',
+    required this.semanticsLabel,
     this.caption,
     this.isDecorative = false,
     this.width,
@@ -24,8 +24,9 @@ class AccessibleImage extends StatelessWidget {
     this.errorWidget,
     this.captionStyle,
   }) : assert(
-         isDecorative || (altText.length > 0 && altText.length <= 125),
-         'Alt text must be non-empty and <= 125 characters for meaningful images.',
+         isDecorative ||
+             (semanticsLabel.length > 0 && semanticsLabel.length <= 125),
+         'Semantics label must be non-empty and <= 125 characters for meaningful images.',
        );
 
   @override
@@ -47,7 +48,7 @@ class AccessibleImage extends StatelessWidget {
     );
 
     final semanticsWidget = Semantics(
-      label: isDecorative ? '' : altText,
+      label: isDecorative ? '' : semanticsLabel,
       excludeSemantics: isDecorative,
       image: true,
       child: imageWidget,

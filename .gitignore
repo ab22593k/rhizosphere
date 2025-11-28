@@ -30,6 +30,33 @@ specs/
 /pubspec.lock
 **/doc/api/
 .dart_tool/
+.flutter-plugins
 .flutter-plugins-dependencies
+.packages
 /build/
 /coverage/
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+
+# Android
+android/.gradle/
+android/app/build/
+android/app/gradle/
+
+# Linux
+linux/flutter/ephemeral/
+
+# macOS
+macos/Flutter/ephemeral/
+
+# Windows
+windows/flutter/ephemeral/
+
+# Web
+web/build/
+
+# Universal
+Thumbs.db
+*.tmp

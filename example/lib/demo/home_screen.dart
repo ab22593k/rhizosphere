@@ -26,7 +26,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rhizosphere Demo'),
+        title: DynamicTooltipLabel(text: 'Rhizosphere Demo'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -46,6 +46,31 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text('Welcome to Rhizosphere'),
+              const SizedBox(height: 20),
+              // Demonstrate AccessibleImage
+              AccessibleImage(
+                image: AssetImage('assets/placeholder.png'),
+                semanticsLabel:
+                    'Placeholder image demonstrating accessibility caption positioning',
+                caption: 'Accessible image with caption',
+              ),
+              const SizedBox(height: 20),
+              // Demonstrate AccessibleText
+              AccessibleText(
+                text:
+                    'This is accessible text that scales with system settings.',
+                maxLines: 2,
+              ),
+              const SizedBox(height: 20),
+              // Demonstrate TruncationHandler
+              SizedBox(
+                width: 200,
+                child: TruncationHandler(
+                  text:
+                      'This is a long text that will be truncated with ellipsis and tooltip',
+                  maxWidth: 200,
+                ),
+              ),
               const SizedBox(height: 20),
               AccessibleTextField(
                 label: 'Username',

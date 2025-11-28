@@ -5,8 +5,8 @@ import 'package:rhizosphere/features/adaptive_layout/widgets/responsive_pane.dar
 void main() {
   testWidgets('ThreePaneLayout shows all panes on Expanded', (tester) async {
     // Setup Expanded size
-    tester.binding.window.physicalSizeTestValue = const Size(1200, 800);
-    tester.binding.window.devicePixelRatioTestValue = 1.0;
+    tester.view.physicalSize = const Size(1200, 800);
+    tester.view.devicePixelRatio = 1.0;
 
     await tester.pumpWidget(
       const MaterialApp(
@@ -27,8 +27,8 @@ void main() {
     tester,
   ) async {
     // Setup Compact size
-    tester.binding.window.physicalSizeTestValue = const Size(400, 800);
-    tester.binding.window.devicePixelRatioTestValue = 1.0;
+    tester.view.physicalSize = const Size(400, 800);
+    tester.view.devicePixelRatio = 1.0;
 
     await tester.pumpWidget(
       const MaterialApp(

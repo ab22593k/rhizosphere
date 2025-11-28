@@ -4,8 +4,8 @@ import 'package:rhizosphere/core/adaptive/components/adaptive_fab.dart';
 
 void main() {
   testWidgets('AdaptiveFAB is mini on Compact', (tester) async {
-    tester.binding.window.physicalSizeTestValue = const Size(400, 800);
-    tester.binding.window.devicePixelRatioTestValue = 1.0;
+    tester.view.physicalSize = const Size(400, 800);
+    tester.view.devicePixelRatio = 1.0;
 
     await tester.pumpWidget(
       MaterialApp(
@@ -25,8 +25,8 @@ void main() {
   });
 
   testWidgets('AdaptiveFAB is large on Expanded', (tester) async {
-    tester.binding.window.physicalSizeTestValue = const Size(1200, 800);
-    tester.binding.window.devicePixelRatioTestValue = 1.0;
+    tester.view.physicalSize = const Size(1200, 800);
+    tester.view.devicePixelRatio = 1.0;
 
     await tester.pumpWidget(
       MaterialApp(
