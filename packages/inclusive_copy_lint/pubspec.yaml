@@ -1,0 +1,16 @@
+name: inclusive_copy_lint
+description: Custom linter for Inclusive Copy Engine.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.10.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  custom_lint_builder: ^0.8.0
+  analyzer: ^7.5.0
+  source_span: ^1.10.0
+
+dev_dependencies:
+  test: ^1.24.0

@@ -920,6 +920,8 @@ This methodology enforces a proactive approach to design, ensuring that systems 
   3.  **Adapt:** Use this feedback to fundamentally refine the system model, ensuring the software evolves to meet the reality of its usage rather than forcing users to conform to the software.
 
 ## Active Technologies
+- Dart with Flutter 3.10+ (current stable) + flutter_intl (for .arb files), custom_lints package (for inclusive copy linting), flutter_riverpod (state management) (002-inclusive-copy-engine)
+- Localized string files (.arb files) - no database required (002-inclusive-copy-engine)
 
 - Dart with Flutter 3.10+ (current stable) + flutter_screenutil (optional for responsive units), accessibility_tools (for dev-time checks), flutter_riverpod (existing in project) (001-image-alt-text-scaling)
 - N/A (UI component library) (001-image-alt-text-scaling)
