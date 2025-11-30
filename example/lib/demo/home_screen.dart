@@ -24,13 +24,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: DynamicTooltipLabel(text: 'Rhizosphere Demo'),
+        title: DynamicTooltipLabel(text: '${l10n.appTitle} Demo'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
-            tooltip: 'Settings',
+            tooltip: l10n.settingsLabel,
             onPressed: () {
               Navigator.of(
                 context,
@@ -45,7 +46,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Welcome to Rhizosphere'),
+              Text('Welcome to ${l10n.appTitle}'),
               const SizedBox(height: 20),
               // Demonstrate AccessibleImage
               AccessibleImage(
@@ -53,6 +54,17 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 semanticsLabel:
                     'Placeholder image demonstrating accessibility caption positioning',
                 caption: 'Accessible image with caption',
+              ),
+              const SizedBox(height: 20),
+              // Demonstrate Localized Button (Positive Outcome)
+              AccessibleButton(
+                label: l10n.savePhoto,
+                semanticLabel: 'Save photo to gallery',
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('${l10n.savePhoto} clicked')),
+                  );
+                },
               ),
               const SizedBox(height: 20),
               // Demonstrate AccessibleText

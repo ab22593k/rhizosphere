@@ -51,3 +51,6 @@ export 'core/adaptive/components/adaptive_app_bar.dart';
 export 'features/adaptive_layout/views/adaptive_scaffold.dart';
 export 'features/adaptive_layout/widgets/responsive_pane.dart';
 export 'features/adaptive_layout/providers/adaptive_layout_provider.dart';
+
+// Localization
+export 'l10n/app_localizations.dart';

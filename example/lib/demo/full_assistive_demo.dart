@@ -36,7 +36,7 @@ class _FullAssistiveDemoState extends State<FullAssistiveDemo> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Live Region Section
-            _buildSectionHeader('Live Status Updates'),
+            _buildSectionHeader('Live status updates'),
             const Text(
               'The box below announces changes to screen readers automatically.',
             ),
@@ -67,7 +67,7 @@ class _FullAssistiveDemoState extends State<FullAssistiveDemo> {
             const SizedBox(height: 32),
 
             // Semantic Order Section
-            _buildSectionHeader('Semantic Navigation'),
+            _buildSectionHeader('Semantic navigation'),
             const Text(
               'These items are grouped logically. Screen readers should read the group label first, then the content.',
             ),
@@ -80,14 +80,14 @@ class _FullAssistiveDemoState extends State<FullAssistiveDemo> {
                     'Group A',
                     style: Theme.of(context).textTheme.labelLarge,
                   ),
-                  const Text('Description for Group A content.'),
+                  const Text('Description for group A content.'),
                 ],
               ),
             ),
             const SizedBox(height: 16),
 
             // Input Alternatives Section
-            _buildSectionHeader('Input Alternatives'),
+            _buildSectionHeader('Input alternatives'),
             const Text('Try tapping, long-pressing, or swiping the box below.'),
             const SizedBox(height: 16),
             GestureHandler(
@@ -101,7 +101,7 @@ class _FullAssistiveDemoState extends State<FullAssistiveDemo> {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
-                  'Interactive Zone',
+                  'Interactive zone',
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.onPrimaryContainer,
                     fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class _FullAssistiveDemoState extends State<FullAssistiveDemo> {
             const SizedBox(height: 32),
 
             // Focus & Keyboard Section
-            _buildSectionHeader('Keyboard & Switch Access'),
+            _buildSectionHeader('Keyboard & switch access'),
             const Text(
               'These buttons have explicit focus order and large touch targets.',
             ),

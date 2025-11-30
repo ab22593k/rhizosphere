@@ -47,7 +47,7 @@ class _AdaptiveDemoState extends ConsumerState<AdaptiveDemo> {
 
     return NavigationSuiteScaffold(
       appBar: AdaptiveAppBar(
-        title: const Text('Adaptive Layout Demo'),
+        title: const Text('Adaptive layout demo'),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
@@ -73,7 +73,7 @@ class _AdaptiveDemoState extends ConsumerState<AdaptiveDemo> {
       case 1:
         return const ItemsPane();
       case 2:
-        return const Center(child: Text('Settings Page'));
+        return const Center(child: Text('Settings page'));
       default:
         return const SizedBox.shrink();
     }
@@ -97,7 +97,7 @@ class DashboardPane extends StatelessWidget {
             margin: const EdgeInsets.all(8),
             child: ListTile(
               leading: CircleAvatar(child: Text('${index + 1}')),
-              title: Text('Dashboard Item ${index + 1}'),
+              title: Text('Dashboard item ${index + 1}'),
               subtitle: const Text('Adaptive content goes here'),
             ),
           );
