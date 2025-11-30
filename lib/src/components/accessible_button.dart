@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 ///   ensuring screen readers announce the action clearly ("Submit Form") rather than just the visual text ("Click Me").
 /// - **Focus**: Ensures the button is focusable for keyboard and switch users.
 /// - **Actions**: Explicitly wires [onTap] to the semantic node to ensure action availability.
+/// - **Scannability**: Enforces short, action-oriented labels (max 4 words).
 class AccessibleButton extends StatelessWidget {
   /// The visual text displayed on the button.
   final String label;
@@ -27,6 +28,18 @@ class AccessibleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Validate word count (max 4 words for scannability)
+    assert(() {
+      final wordCount = label.trim().split(RegExp(r'\s+')).length;
+      if (wordCount > 4) {
+        throw AssertionError(
+          'AccessibleButton label "$label" has $wordCount words. '
+          'Action buttons must be 4 words or fewer for fast scanning.',
+        );
+      }
+      return true;
+    }());
+
     // We use an explicit Semantics wrapper to override the default semantics
     // of the ElevatedButton. This allows us to provide a specific [semanticLabel]
     // that differs from the visual [label] (e.g., "Submit" vs "Next").
