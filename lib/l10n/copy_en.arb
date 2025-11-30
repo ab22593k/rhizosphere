@@ -1,0 +1,43 @@
+{
+  "@@locale": "en",
+  "savePhoto": "Save photo",
+  "@savePhoto": {
+    "description": "Button to save a photo",
+    "context": "SaveButton"
+  },
+  "removePhoto": "Remove photo",
+  "@removePhoto": {
+    "description": "Button to remove a photo",
+    "context": "RemoveButton"
+  },
+  "signOut": "Sign out",
+  "@signOut": {
+    "description": "Button to sign out of account",
+    "context": "Auth"
+  },
+  "yourSteps": "Your steps",
+  "@yourSteps": {
+    "description": "Heading for steps list",
+    "context": "Steps"
+  },
+  "appTitle": "Rhizosphere",
+  "@appTitle": {
+    "description": "Application title",
+    "context": "App"
+  },
+  "homeLabel": "Home",
+  "@homeLabel": {
+    "description": "Label for Home navigation",
+    "context": "Navigation"
+  },
+  "settingsLabel": "Settings",
+  "@settingsLabel": {
+    "description": "Label for Settings navigation",
+    "context": "Navigation"
+  },
+  "adaptiveBody": "Adaptive body",
+  "@adaptiveBody": {
+    "description": "Placeholder text for adaptive body",
+    "context": "Placeholder"
+  }
+}

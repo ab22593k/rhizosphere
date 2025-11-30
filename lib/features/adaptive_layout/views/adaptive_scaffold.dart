@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/adaptive/components/adaptive_app_bar.dart';
 import '../../../core/adaptive/layout/adaptive_builder.dart';
 import '../../../core/adaptive/layout/window_size_class.dart';
+import '../../../l10n/app_localizations.dart';
 import '../providers/adaptive_layout_provider.dart';
 
 class NavigationSuiteScaffold extends ConsumerWidget {
@@ -91,36 +92,46 @@ class _AdaptiveScaffoldState extends ConsumerState<AdaptiveScaffold> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return NavigationSuiteScaffold(
-      appBar: const AdaptiveAppBar(title: Text('Rhizosphere')),
+      appBar: AdaptiveAppBar(title: Text(l10n.appTitle)),
       selectedIndex: _selectedIndex,
       onDestinationSelected: (index) {
         setState(() {
           _selectedIndex = index;
         });
       },
-      destinations: const [
-        NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-        NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
+      destinations: [
+        NavigationDestination(
+          icon: const Icon(Icons.home),
+          label: l10n.homeLabel,
+        ),
+        NavigationDestination(
+          icon: const Icon(Icons.settings),
+          label: l10n.settingsLabel,
+        ),
       ],
-      railDestinations: const [
-        NavigationRailDestination(icon: Icon(Icons.home), label: Text('Home')),
+      railDestinations: [
         NavigationRailDestination(
-          icon: Icon(Icons.settings),
-          label: Text('Settings'),
+          icon: const Icon(Icons.home),
+          label: Text(l10n.homeLabel),
+        ),
+        NavigationRailDestination(
+          icon: const Icon(Icons.settings),
+          label: Text(l10n.settingsLabel),
         ),
       ],
-      drawerDestinations: const [
+      drawerDestinations: [
         NavigationDrawerDestination(
-          icon: Icon(Icons.home),
-          label: Text('Home'),
+          icon: const Icon(Icons.home),
+          label: Text(l10n.homeLabel),
         ),
         NavigationDrawerDestination(
-          icon: Icon(Icons.settings),
-          label: Text('Settings'),
+          icon: const Icon(Icons.settings),
+          label: Text(l10n.settingsLabel),
         ),
       ],
-      body: const Center(child: Text('Adaptive Body')),
+      body: Center(child: Text(l10n.adaptiveBody)),
     );
   }
 }

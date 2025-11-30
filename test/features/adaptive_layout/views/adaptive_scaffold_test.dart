@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rhizosphere/features/adaptive_layout/views/adaptive_scaffold.dart';
+import 'package:rhizosphere/l10n/app_localizations.dart';
 
 void main() {
   testWidgets('AdaptiveScaffold shows BottomNavigationBar on Compact', (
@@ -12,7 +14,18 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
 
     await tester.pumpWidget(
-      const ProviderScope(child: MaterialApp(home: AdaptiveScaffold())),
+      const ProviderScope(
+        child: MaterialApp(
+          localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: [Locale('en')],
+          home: AdaptiveScaffold(),
+        ),
+      ),
     );
 
     // Expect BottomNavigationBar
@@ -30,7 +43,18 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
 
     await tester.pumpWidget(
-      const ProviderScope(child: MaterialApp(home: AdaptiveScaffold())),
+      const ProviderScope(
+        child: MaterialApp(
+          localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: [Locale('en')],
+          home: AdaptiveScaffold(),
+        ),
+      ),
     );
 
     expect(find.byType(NavigationRail), findsOneWidget);
@@ -45,7 +69,18 @@ void main() {
     tester.view.devicePixelRatio = 1.0;
 
     await tester.pumpWidget(
-      const ProviderScope(child: MaterialApp(home: AdaptiveScaffold())),
+      const ProviderScope(
+        child: MaterialApp(
+          localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: [Locale('en')],
+          home: AdaptiveScaffold(),
+        ),
+      ),
     );
 
     expect(find.byType(NavigationDrawer), findsOneWidget); // Permanent drawer

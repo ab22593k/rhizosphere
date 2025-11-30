@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
   flutter_riverpod: ^3.0.3
   flutter_screenutil: ^5.9.3
   realm: ^20.2.0
@@ -18,8 +21,18 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  custom_lint: ^0.8.0
+  inclusive_copy_lint:
+    path: packages/inclusive_copy_lint
   build_runner: ^2.4.13
-  analyzer: ^7.7.1
+  analyzer: ^7.5.0
+
+flutter_intl:
+  enabled: true
+  arb_dir: lib/l10n
+  output_dir: lib/generated
+  main_locale: en
 
 flutter:
   uses-material-design: true
+  generate: true
