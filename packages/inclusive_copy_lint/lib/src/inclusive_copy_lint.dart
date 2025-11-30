@@ -3,6 +3,8 @@ import 'rules/ban_title_case_text_widget.dart';
 import 'rules/ban_forbidden_pronouns.dart';
 import 'rules/ban_latin_abbreviations.dart';
 import 'rules/ban_alarmist_language.dart';
+import 'rules/check_pronoun_clarity.dart';
+import 'rules/check_reading_order.dart';
 
 class InclusiveCopyLint extends PluginBase {
   @override
@@ -11,5 +13,7 @@ class InclusiveCopyLint extends PluginBase {
     const BanForbiddenPronouns(),
     const BanLatinAbbreviations(),
     const BanAlarmistLanguage(),
+    const CheckPronounClarity(),
+    const CheckReadingOrder(),
   ];
 }

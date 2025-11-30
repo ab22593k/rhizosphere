@@ -31,4 +31,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get adaptiveBody => 'Adaptive body';
+
+  @override
+  String get hierarchyDemoLabel => 'Open Hierarchy Demo';
+
+  @override
+  String get fullDemoLabel => 'Open Full Demo';
+
+  @override
+  String get adaptiveDemoLabel => 'Open Adaptive Demo';
+
+  @override
+  String get pressMe => 'Press Me';
+
+  @override
+  String get swipeHoldMe => 'Swipe/Hold Me';
 }

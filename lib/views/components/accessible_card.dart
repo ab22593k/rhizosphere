@@ -33,6 +33,7 @@ class _AccessibleCardState extends State<AccessibleCard> {
       button: true,
       label: '${widget.title}, ${widget.description}',
       hint: 'Double tap to activate',
+      excludeSemantics: true,
       child: Padding(
         padding: const EdgeInsets.all(8.0), // 8dp spacing
         child: Material(

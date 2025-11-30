@@ -46,10 +46,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Welcome to ${l10n.appTitle}'),
+              AccessibleHeader(text: 'Welcome to ${l10n.appTitle}', level: 1),
               const SizedBox(height: 20),
               // Demonstrate AccessibleImage
-              AccessibleImage(
+              const AccessibleImage(
                 image: AssetImage('assets/placeholder.png'),
                 semanticsLabel:
                     'Placeholder image demonstrating accessibility caption positioning',
@@ -68,14 +68,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(height: 20),
               // Demonstrate AccessibleText
-              AccessibleText(
+              const AccessibleText(
                 text:
                     'This is accessible text that scales with system settings.',
                 maxLines: 2,
               ),
               const SizedBox(height: 20),
               // Demonstrate TruncationHandler
-              SizedBox(
+              const SizedBox(
                 width: 200,
                 child: TruncationHandler(
                   text:
@@ -91,7 +91,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(height: 20),
               AccessibleButton(
-                label: 'Press Me',
+                label: l10n.pressMe,
                 semanticLabel: 'Announce time',
                 onPressed: _announce,
               ),
@@ -104,7 +104,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   color: Theme.of(context).colorScheme.secondaryContainer,
                   alignment: Alignment.center,
                   child: Text(
-                    'Swipe/Hold Me',
+                    l10n.swipeHoldMe,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onSecondaryContainer,
@@ -122,7 +122,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               Divider(color: Theme.of(context).dividerColor),
               const SizedBox(height: 20),
               AccessibleButton(
-                label: 'Open Full Demo',
+                label: l10n.fullDemoLabel,
                 semanticLabel: 'Navigate to Full Assistive Technology Demo',
                 onPressed: () {
                   Navigator.of(context).push(
@@ -134,11 +134,43 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(height: 20),
               AccessibleButton(
-                label: 'Open Adaptive Demo',
+                label: l10n.adaptiveDemoLabel,
                 semanticLabel: 'Navigate to Adaptive Layout Demo',
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => const AdaptiveDemo()),
+                  );
+                },
+              ),
+              const SizedBox(height: 20),
+              AccessibleButton(
+                label: l10n.hierarchyDemoLabel,
+                semanticLabel: 'Navigate to Hierarchy View Demo',
+                onPressed: () {
+                  final demoItems = [
+                    NavigationItem(
+                      id: '1',
+                      title: 'Accessibility',
+                      description: 'Core accessibility features',
+                      route: '/accessibility',
+                    ),
+                    NavigationItem(
+                      id: '2',
+                      title: 'Adaptive Layout',
+                      description: 'Responsive design patterns',
+                      route: '/adaptive',
+                    ),
+                    NavigationItem(
+                      id: '3',
+                      title: 'Localization',
+                      description: 'Internationalization support',
+                      route: '/l10n',
+                    ),
+                  ];
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => HierarchyView(items: demoItems),
+                    ),
                   );
                 },
               ),
