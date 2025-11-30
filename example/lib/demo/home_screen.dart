@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rhizosphere/rhizosphere.dart';
 import 'adaptive_demo.dart';
+import 'comprehensive_adaptive_demo.dart';
 import 'full_assistive_demo.dart';
 import 'settings_screen.dart';
 
@@ -170,6 +171,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (_) => HierarchyView(items: demoItems),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 20),
+              AccessibleButton(
+                label: 'Comprehensive Demo',
+                semanticLabel: 'Navigate to Comprehensive Adaptive Demo',
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const ComprehensiveAdaptiveDemo(),
                     ),
                   );
                 },
