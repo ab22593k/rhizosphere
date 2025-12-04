@@ -11,6 +11,7 @@
 library;
 
 export 'src/config/accessibility_config.dart';
+export 'src/config/rhizosphere_scroll_behavior.dart';
 export 'src/config/text_scaler.dart';
 export 'src/providers/theme_provider.dart';
 export 'src/widgets/accessible_wrapper.dart';

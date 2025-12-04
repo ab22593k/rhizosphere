@@ -11,9 +11,9 @@ class NavigationSuiteScaffold extends ConsumerWidget {
   final Widget body;
   final int selectedIndex;
   final ValueChanged<int> onDestinationSelected;
-  final List<NavigationDestination> destinations; // For NavigationBar
-  final List<NavigationRailDestination> railDestinations; // For Rail
-  final List<Widget> drawerDestinations; // For Drawer (usually list tiles)
+  final List<NavigationDestination> destinations;
+  final List<NavigationRailDestination> railDestinations;
+  final List<Widget> drawerDestinations;
   final PreferredSizeWidget? appBar;
 
   const NavigationSuiteScaffold({

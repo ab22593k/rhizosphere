@@ -23,7 +23,7 @@ class ThreePaneLayout extends StatelessWidget {
 
         switch (config.behavior) {
           case PaneBehavior.stacked:
-            return primaryPane; // Basic stacked, navigation handles others
+            return primaryPane;
 
           case PaneBehavior.sidebar:
             return Row(
@@ -32,10 +32,7 @@ class ThreePaneLayout extends StatelessWidget {
                 // might be a list of items.
                 if (supportingPane != null &&
                     config.supportingPane == PaneVisibility.permanent)
-                  SizedBox(
-                    width: 250, // Fixed or flexible
-                    child: supportingPane,
-                  ),
+                  SizedBox(width: 250, child: supportingPane),
                 Expanded(child: primaryPane),
                 // Detail pane floating/levitating handled via overlay or separate route usually
               ],
