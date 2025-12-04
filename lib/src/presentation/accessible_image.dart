@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rhizosphere/accessible_widgets/image_caption.dart';
+import 'image_caption.dart';
 
 class AccessibleImage extends StatelessWidget {
   final ImageProvider image;

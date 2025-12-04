@@ -2,7 +2,8 @@
 @Tags(['accessibility'])
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/accessible_widgets/utils/truncation_handler.dart';
+
+import 'package:rhizosphere/rhizosphere.dart';
 
 void main() {
   testWidgets('TruncationHandler shows full text when space is sufficient', (

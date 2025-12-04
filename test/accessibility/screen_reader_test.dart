@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/views/hierarchy_view.dart';
-import 'package:rhizosphere/models/navigation_item.dart';
+
+import 'package:rhizosphere/rhizosphere.dart';
 
 void main() {
   testWidgets(

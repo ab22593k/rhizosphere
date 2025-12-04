@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rhizosphere/accessible_widgets/utils/accessibility_extensions.dart';
+
+import 'utils/accessibility_extensions.dart';
 
 class DynamicTooltipLabel extends StatelessWidget {
   final String text;

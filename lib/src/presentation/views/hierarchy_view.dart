@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rhizosphere/models/intents.dart';
-import 'package:rhizosphere/views/base_layout.dart';
-import 'package:rhizosphere/views/components/accessible_header.dart';
-import 'package:rhizosphere/views/components/accessible_card.dart';
-import 'package:rhizosphere/models/navigation_item.dart';
-import 'package:rhizosphere/views/shortcuts_help_view.dart';
+
+import '../../presentation/views/base_layout.dart';
+import '../../presentation/views/components/accessible_card.dart';
+import '../../presentation/views/components/accessible_header.dart';
+import '../../presentation/views/shortcuts_help_view.dart';
+import '../../data/intents.dart';
+import '../../data/navigation_item.dart';
 
 class HierarchyView extends StatelessWidget {
   final List<NavigationItem> items;

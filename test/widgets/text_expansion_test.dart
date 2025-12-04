@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/src/components/accessible_button.dart';
-import 'package:rhizosphere/views/components/accessible_header.dart';
+
+import 'package:rhizosphere/rhizosphere.dart';
 
 void main() {
   testWidgets('Widgets handle text expansion without overflow', (
