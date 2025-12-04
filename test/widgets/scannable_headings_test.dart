@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/views/components/accessible_header.dart';
+
+import 'package:rhizosphere/rhizosphere.dart';
 
 void main() {
   testWidgets('ScannableHeading accepts short text (<= 4 words)', (

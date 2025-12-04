@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/adaptive/components/adaptive_app_bar.dart';
 import '../../../core/adaptive/layout/adaptive_builder.dart';
 import '../../../core/adaptive/layout/window_size_class.dart';
-import '../../../l10n/app_localizations.dart';
+import '../../../core/l10n/app_localizations.dart';
 import '../providers/adaptive_layout_provider.dart';
 
 class NavigationSuiteScaffold extends ConsumerWidget {

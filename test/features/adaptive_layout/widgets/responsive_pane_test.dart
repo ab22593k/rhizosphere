@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/features/adaptive_layout/widgets/responsive_pane.dart';
+
+import 'package:rhizosphere/rhizosphere.dart';
 
 void main() {
   testWidgets('ThreePaneLayout shows all panes on Expanded', (tester) async {

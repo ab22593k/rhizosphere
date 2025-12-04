@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rhizosphere/views/base_layout.dart';
-import 'package:rhizosphere/views/components/accessible_header.dart';
+
+import '../views/base_layout.dart';
+import '../views/components/accessible_header.dart';
 
 class ShortcutsHelpView extends StatelessWidget {
   const ShortcutsHelpView({super.key});

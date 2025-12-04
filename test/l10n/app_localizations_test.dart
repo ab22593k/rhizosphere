@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/l10n/app_localizations_en.dart';
+
+import 'package:rhizosphere/rhizosphere.dart';
 
 void main() {
   test('AppLocalizations keys return correct keys/defaults', () {

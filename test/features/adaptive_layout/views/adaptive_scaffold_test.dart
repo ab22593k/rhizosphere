@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/features/adaptive_layout/views/adaptive_scaffold.dart';
-import 'package:rhizosphere/l10n/app_localizations.dart';
+
+import 'package:rhizosphere/rhizosphere.dart';
 
 void main() {
   testWidgets('AdaptiveScaffold shows BottomNavigationBar on Compact', (

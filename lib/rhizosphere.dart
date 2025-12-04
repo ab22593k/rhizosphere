@@ -21,37 +21,38 @@ export 'src/components/accessible_text_field.dart';
 export 'src/components/gesture_handler.dart';
 
 // New Accessibility Hierarchy Exports
-export 'models/app_theme.dart';
-export 'models/navigation_item.dart';
-export 'models/intents.dart';
-export 'viewmodels/accessibility_viewmodel.dart';
-export 'views/base_layout.dart';
-export 'views/hierarchy_view.dart';
-export 'views/shortcuts_help_view.dart';
-export 'views/components/accessible_header.dart';
-export 'views/components/accessible_card.dart';
+export 'src/data/app_theme.dart';
+export 'src/data/navigation_item.dart';
+export 'src/data/intents.dart';
+export 'src/presentation/viewmodels/accessibility_viewmodel.dart';
+export 'src/presentation/views/base_layout.dart';
+export 'src/presentation/views/hierarchy_view.dart';
+export 'src/presentation/views/shortcuts_help_view.dart';
+export 'src/presentation/views/components/accessible_header.dart';
+export 'src/presentation/views/components/accessible_card.dart';
 
 // New Accessible Widgets Exports
-export 'accessible_widgets/accessible_image.dart';
-export 'accessible_widgets/accessible_text.dart';
-export 'accessible_widgets/expandable_truncated_text.dart';
-export 'accessible_widgets/dynamic_tooltip_label.dart';
-export 'accessible_widgets/image_caption.dart';
-export 'accessible_widgets/utils/accessibility_extensions.dart';
-export 'accessible_widgets/utils/contrast_checker.dart';
-export 'accessible_widgets/utils/truncation_handler.dart';
-export 'accessible_widgets/utils/accessibility_helpers.dart';
+export 'src/presentation/accessible_image.dart';
+export 'src/presentation/accessible_text.dart';
+export 'src/presentation/expandable_truncated_text.dart';
+export 'src/presentation/dynamic_tooltip_label.dart';
+export 'src/presentation/image_caption.dart';
+export 'src/presentation/utils/accessibility_extensions.dart';
+export 'src/presentation/utils/contrast_checker.dart';
+export 'src/presentation/utils/truncation_handler.dart';
+export 'src/presentation/utils/accessibility_helpers.dart';
 
 // Adaptive Layout System
-export 'core/adaptive/layout/window_size_class.dart';
-export 'core/adaptive/layout/adaptive_builder.dart';
-export 'core/adaptive/layout/navigation_strategy.dart';
-export 'core/adaptive/layout/pane_configuration.dart';
-export 'core/adaptive/components/adaptive_fab.dart';
-export 'core/adaptive/components/adaptive_app_bar.dart';
-export 'features/adaptive_layout/views/adaptive_scaffold.dart';
-export 'features/adaptive_layout/widgets/responsive_pane.dart';
-export 'features/adaptive_layout/providers/adaptive_layout_provider.dart';
+export 'src/core/adaptive/layout/window_size_class.dart';
+export 'src/core/adaptive/layout/adaptive_builder.dart';
+export 'src/core/adaptive/layout/navigation_strategy.dart';
+export 'src/core/adaptive/layout/pane_configuration.dart';
+export 'src/core/adaptive/components/adaptive_fab.dart';
+export 'src/core/adaptive/components/adaptive_app_bar.dart';
+export 'src/features/adaptive_layout/views/adaptive_scaffold.dart';
+export 'src/features/adaptive_layout/widgets/responsive_pane.dart';
+export 'src/features/adaptive_layout/providers/adaptive_layout_provider.dart';
 
 // Localization
-export 'l10n/app_localizations.dart';
+export 'src/core/l10n/app_localizations.dart';
+export 'src/core/l10n/app_localizations_en.dart';

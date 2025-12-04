@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rhizosphere/accessible_widgets/accessible_text.dart';
+
+import 'accessible_text.dart';
 
 class ExpandableTruncatedText extends StatefulWidget {
   final String text;
