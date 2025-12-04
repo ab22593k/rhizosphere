@@ -5,6 +5,7 @@ import 'adaptive_demo.dart';
 import 'comprehensive_adaptive_demo.dart';
 import 'full_assistive_demo.dart';
 import 'settings_screen.dart';
+import 'motion_showcase.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -184,6 +185,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     MaterialPageRoute(
                       builder: (_) => const ComprehensiveAdaptiveDemo(),
                     ),
+                  );
+                },
+              ),
+              const SizedBox(height: 20),
+              AccessibleButton(
+                label: 'Motion System Showcase',
+                semanticLabel: 'Navigate to Motion System Showcase',
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const MotionShowcase()),
                   );
                 },
               ),

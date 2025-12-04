@@ -56,3 +56,12 @@ export 'src/features/adaptive_layout/providers/adaptive_layout_provider.dart';
 // Localization
 export 'src/core/l10n/app_localizations.dart';
 export 'src/core/l10n/app_localizations_en.dart';
+
+// Motion System
+export 'src/motion/motion_scheme.dart';
+export 'src/motion/motion_tokens.dart';
+export 'src/motion/motion_provider.dart';
+export 'src/motion/spring_wrapper.dart';
+export 'src/motion/motion_routes.dart';
+export 'src/motion/motion_adaptive.dart';
+export 'src/motion/spring_extensions.dart';
