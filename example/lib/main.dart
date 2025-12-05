@@ -29,7 +29,6 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       title: 'Rhizosphere Demo',
       localizationsDelegates: const [
-        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

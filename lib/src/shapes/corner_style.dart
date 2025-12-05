@@ -1,4 +1,8 @@
+// ignore_for_file: constant_identifier_names
+
 /// Represents the 11 corner radius values in the Material 3 scale.
+library;
+
 enum CornerStyle {
   /// 0dp - Square
   none(0.0),
@@ -16,13 +20,13 @@ enum CornerStyle {
   l(16.0),
 
   /// 20dp - Large Increased
-  l_inc(20.0),
+  l_increased(20.0),
 
   /// 24dp - Extra Large
   xl(24.0),
 
   /// 32dp - Extra Large Increased
-  xl_inc(32.0),
+  xl_increased(32.0),
 
   /// 40dp - Extra Extra Large
   xxl(40.0),

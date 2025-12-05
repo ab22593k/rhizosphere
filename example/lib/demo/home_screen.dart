@@ -31,14 +31,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: DynamicTooltipLabel(text: '${l10n.appTitle} Demo'),
+        title: DynamicTooltipLabel(text: 'appTitle Demo'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
-            tooltip: l10n.settingsLabel,
+            tooltip: 'settingsLabel',
             onPressed: () {
               Navigator.of(
                 context,
@@ -53,7 +52,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AccessibleHeader(text: 'Welcome to ${l10n.appTitle}', level: 1),
+              AccessibleHeader(text: 'Welcome to appTitle', level: 1),
               const SizedBox(height: 20),
               // Demonstrate AccessibleImage
               const AccessibleImage(
@@ -65,12 +64,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               const SizedBox(height: 20),
               // Demonstrate Localized Button (Positive Outcome)
               AccessibleButton(
-                label: l10n.savePhoto,
+                label: 'savePhoto',
                 semanticLabel: 'Save photo to gallery',
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('${l10n.savePhoto} clicked')),
-                  );
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(SnackBar(content: Text('savePhoto clicked')));
                 },
               ),
               const SizedBox(height: 20),
@@ -98,7 +97,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(height: 20),
               AccessibleButton(
-                label: l10n.pressMe,
+                label: 'pressMe',
                 semanticLabel: 'Announce time',
                 onPressed: _announce,
               ),
@@ -111,7 +110,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   color: Theme.of(context).colorScheme.secondaryContainer,
                   alignment: Alignment.center,
                   child: Text(
-                    l10n.swipeHoldMe,
+                    'swipeHoldMe',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.onSecondaryContainer,
@@ -129,7 +128,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               Divider(color: Theme.of(context).dividerColor),
               const SizedBox(height: 20),
               AccessibleButton(
-                label: l10n.fullDemoLabel,
+                label: 'fullDemoLabel',
                 semanticLabel: 'Navigate to Full Assistive Technology Demo',
                 onPressed: () {
                   Navigator.of(context).push(
@@ -141,7 +140,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(height: 20),
               AccessibleButton(
-                label: l10n.adaptiveDemoLabel,
+                label: 'adaptiveDemoLabel',
                 semanticLabel: 'Navigate to Adaptive Layout Demo',
                 onPressed: () {
                   Navigator.of(context).push(

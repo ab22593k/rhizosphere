@@ -9,10 +9,9 @@ class SettingsScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final config = ref.watch(accessibilityProvider);
     final notifier = ref.read(accessibilityProvider.notifier);
-    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.settingsLabel)),
+      appBar: AppBar(title: Text('settingsLabel')),
       body: ListView(
         children: [
           SwitchListTile(

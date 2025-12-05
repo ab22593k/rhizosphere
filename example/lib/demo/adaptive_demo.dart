@@ -16,14 +16,12 @@ class _AdaptiveDemoState extends ConsumerState<AdaptiveDemo> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-
     // Comprehensive NavigationSuiteScaffold examples
     return NavigationSuiteScaffold(
       // Example 1: Custom AppBar with actions
       appBar: _useCustomAppBar
           ? AdaptiveAppBar(
-              title: Text('${l10n.appTitle} - Advanced Demo'),
+              title: Text('appTitle - Advanced Demo'),
               actions: [
                 IconButton(
                   icon: const Icon(Icons.search),
@@ -61,7 +59,7 @@ class _AdaptiveDemoState extends ConsumerState<AdaptiveDemo> {
                 ),
               ],
             )
-          : AdaptiveAppBar(title: Text('${l10n.appTitle} - Adaptive Demo')),
+          : AdaptiveAppBar(title: Text('appTitle - Adaptive Demo')),
 
       // Example 2: Comprehensive destinations with icons, labels, and tooltips
       selectedIndex: _selectedIndex,
@@ -136,7 +134,7 @@ class _AdaptiveDemoState extends ConsumerState<AdaptiveDemo> {
         ),
         NavigationDrawerDestination(
           icon: const Icon(Icons.settings),
-          label: Text(l10n.settingsLabel),
+          label: Text('settingsLabel'),
         ),
         const NavigationDrawerDestination(
           icon: Icon(Icons.help),
@@ -145,7 +143,7 @@ class _AdaptiveDemoState extends ConsumerState<AdaptiveDemo> {
         const Divider(),
         NavigationDrawerDestination(
           icon: const Icon(Icons.logout),
-          label: Text(l10n.signOut),
+          label: Text('signOut'),
         ),
       ],
 

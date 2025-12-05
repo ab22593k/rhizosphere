@@ -53,10 +53,6 @@ export 'src/features/adaptive_layout/views/adaptive_scaffold.dart';
 export 'src/features/adaptive_layout/widgets/responsive_pane.dart';
 export 'src/features/adaptive_layout/providers/adaptive_layout_provider.dart';
 
-// Localization
-export 'src/core/l10n/app_localizations.dart';
-export 'src/core/l10n/app_localizations_en.dart';
-
 // Motion System
 export 'src/motion/motion_scheme.dart';
 export 'src/motion/motion_tokens.dart';

@@ -11,9 +11,9 @@ class CornerRadius {
     CornerStyle.s: 8.0,
     CornerStyle.m: 12.0,
     CornerStyle.l: 16.0,
-    CornerStyle.l_inc: 20.0,
+    CornerStyle.l_increased: 20.0,
     CornerStyle.xl: 24.0,
-    CornerStyle.xl_inc: 32.0,
+    CornerStyle.xl_increased: 32.0,
     CornerStyle.xxl: 40.0,
     CornerStyle.full: -1.0, // Handled dynamically
   };
