@@ -33,9 +33,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get adaptiveBody => 'جسم تكيفي';
 
   @override
-  String get hierarchyDemoLabel => 'افتح عرض التدرج الهرمي';
-
-  @override
   String get fullDemoLabel => 'افتح العرض الكامل';
 
   @override

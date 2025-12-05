@@ -6,6 +6,11 @@ import 'comprehensive_adaptive_demo.dart';
 import 'full_assistive_demo.dart';
 import 'settings_screen.dart';
 import 'motion_showcase.dart';
+import 'shape_scale_demo.dart';
+import 'tension_gallery_demo.dart';
+import 'morphing_buttons_demo.dart';
+import 'loading_indicators_demo.dart';
+import 'nested_cards_demo.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -146,38 +151,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(height: 20),
               AccessibleButton(
-                label: l10n.hierarchyDemoLabel,
-                semanticLabel: 'Navigate to Hierarchy View Demo',
-                onPressed: () {
-                  final demoItems = [
-                    NavigationItem(
-                      id: '1',
-                      title: 'Accessibility',
-                      description: 'Core accessibility features',
-                      route: '/accessibility',
-                    ),
-                    NavigationItem(
-                      id: '2',
-                      title: 'Adaptive Layout',
-                      description: 'Responsive design patterns',
-                      route: '/adaptive',
-                    ),
-                    NavigationItem(
-                      id: '3',
-                      title: 'Localization',
-                      description: 'Internationalization support',
-                      route: '/l10n',
-                    ),
-                  ];
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => HierarchyView(items: demoItems),
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(height: 20),
-              AccessibleButton(
                 label: 'Comprehensive Demo',
                 semanticLabel: 'Navigate to Comprehensive Adaptive Demo',
                 onPressed: () {
@@ -197,6 +170,61 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     MaterialPageRoute(builder: (_) => const MotionShowcase()),
                   );
                 },
+              ),
+              const SizedBox(height: 20),
+              Divider(color: Theme.of(context).dividerColor),
+              const SizedBox(height: 20),
+              AccessibleHeader(text: 'Shape System', level: 2),
+              const SizedBox(height: 20),
+              Wrap(
+                spacing: 16,
+                runSpacing: 16,
+                alignment: WrapAlignment.center,
+                children: [
+                  AccessibleButton(
+                    label: 'Shape Scale',
+                    semanticLabel: 'View Shape Scale Reference',
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const ShapeScaleDemo()),
+                    ),
+                  ),
+                  AccessibleButton(
+                    label: 'Tension Gallery',
+                    semanticLabel: 'View Tension Gallery Demo',
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const TensionGalleryDemo(),
+                      ),
+                    ),
+                  ),
+                  AccessibleButton(
+                    label: 'Morphing Buttons',
+                    semanticLabel: 'View Morphing Buttons Demo',
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const MorphingButtonsDemo(),
+                      ),
+                    ),
+                  ),
+                  AccessibleButton(
+                    label: 'Loading Indicators',
+                    semanticLabel: 'View Loading Indicators Demo',
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const LoadingIndicatorsDemo(),
+                      ),
+                    ),
+                  ),
+                  AccessibleButton(
+                    label: 'Optical Roundness',
+                    semanticLabel: 'View Optical Roundness Demo',
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const NestedCardsDemo(),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

@@ -40,11 +40,6 @@
     "description": "Placeholder text for adaptive body",
     "context": "Placeholder"
   },
-  "hierarchyDemoLabel": "Open Hierarchy Demo",
-  "@hierarchyDemoLabel": {
-    "description": "Button label to open Hierarchy Demo",
-    "context": "Navigation"
-  },
   "fullDemoLabel": "Open Full Demo",
   "@fullDemoLabel": {
     "description": "Button label to open Full Assistive Demo",

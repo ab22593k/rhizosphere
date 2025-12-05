@@ -154,12 +154,6 @@ abstract class AppLocalizations {
   /// **'Adaptive body'**
   String get adaptiveBody;
 
-  /// Button label to open Hierarchy Demo
-  ///
-  /// In en, this message translates to:
-  /// **'Open Hierarchy Demo'**
-  String get hierarchyDemoLabel;
-
   /// Button label to open Full Assistive Demo
   ///
   /// In en, this message translates to:

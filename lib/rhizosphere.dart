@@ -65,3 +65,12 @@ export 'src/motion/spring_wrapper.dart';
 export 'src/motion/motion_routes.dart';
 export 'src/motion/motion_adaptive.dart';
 export 'src/motion/spring_extensions.dart';
+
+// Shape Tokens
+export 'src/shapes/corner_style.dart';
+export 'src/shapes/corner_radius.dart';
+export 'src/shapes/shape_theme.dart';
+export 'src/shapes/shape_borders.dart';
+export 'src/shapes/shape_morphing.dart';
+export 'src/shapes/optical_roundness.dart';
+export 'src/shapes/svg_shapes.dart';

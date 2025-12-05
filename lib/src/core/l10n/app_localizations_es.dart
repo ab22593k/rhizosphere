@@ -33,9 +33,6 @@ class AppLocalizationsEs extends AppLocalizations {
   String get adaptiveBody => 'Adaptive body';
 
   @override
-  String get hierarchyDemoLabel => 'Abrir Demo de Jerarquía';
-
-  @override
   String get fullDemoLabel => 'Abrir Demo Completa';
 
   @override

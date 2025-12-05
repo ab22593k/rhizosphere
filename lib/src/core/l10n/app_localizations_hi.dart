@@ -33,9 +33,6 @@ class AppLocalizationsHi extends AppLocalizations {
   String get adaptiveBody => 'अनुकूलनीय शरीर';
 
   @override
-  String get hierarchyDemoLabel => 'पदानुक्रम प्रदर्शन खोलें';
-
-  @override
   String get fullDemoLabel => 'पूर्ण प्रदर्शन खोलें';
 
   @override

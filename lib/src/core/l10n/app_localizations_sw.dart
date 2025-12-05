@@ -33,9 +33,6 @@ class AppLocalizationsSw extends AppLocalizations {
   String get adaptiveBody => 'Mwili unaobadilika';
 
   @override
-  String get hierarchyDemoLabel => 'Fungua Onyesho la Uratibu';
-
-  @override
   String get fullDemoLabel => 'Fungua Onyesho Kamili';
 
   @override

@@ -830,9 +830,3 @@ textTheme: const TextTheme(
   formatting.
 - **Use backticks for code:** Enclose code blocks in backtick fences, and
   specify the language.
-
-## Active Technologies
-- Dart 3.x / Flutter 3.x + flutter/physics.dart, flutter_riverpod (001-spring-motion-system)
-
-## Recent Changes
-- 001-spring-motion-system: Added Dart 3.x / Flutter 3.x + flutter/physics.dart, flutter_riverpod
