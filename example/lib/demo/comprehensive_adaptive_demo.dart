@@ -25,12 +25,6 @@ class _ComprehensiveAdaptiveDemoState
       navigationRailLeading: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () {},
-            tooltip: 'Main menu',
-          ),
-          const SizedBox(height: 8),
           FloatingActionButton(
             elevation: 0,
             onPressed: () {},
