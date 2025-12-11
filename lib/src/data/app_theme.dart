@@ -35,6 +35,26 @@ class AppTheme {
         backgroundColor: lightColorScheme.primary,
         foregroundColor: lightColorScheme.onPrimary,
         centerTitle: true,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
+        ),
+      ),
+      navigationBarTheme: NavigationBarThemeData(
+        indicatorShape: const StadiumBorder(),
+        height: 80, // Variable height support (taller)
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+      ),
+      navigationRailTheme: NavigationRailThemeData(
+        indicatorShape: const StadiumBorder(),
+      ),
+      tabBarTheme: TabBarThemeData(
+        indicatorSize: TabBarIndicatorSize.tab,
+        indicator: BoxDecoration(
+          borderRadius: BorderRadius.circular(50), // Pill shape
+          color: lightColorScheme.secondaryContainer,
+        ),
+        labelColor: lightColorScheme.onSecondaryContainer,
+        unselectedLabelColor: lightColorScheme.onSurfaceVariant,
       ),
       cardTheme: CardThemeData(
         shape: _shapeTheme.roundedRectangle(
@@ -72,6 +92,31 @@ class AppTheme {
       materialTapTargetSize: MaterialTapTargetSize.padded,
       visualDensity: VisualDensity.standard,
       extensions: [_shapeTheme],
+      appBarTheme: AppBarTheme(
+        backgroundColor: darkColorScheme.surface,
+        foregroundColor: darkColorScheme.onSurface,
+        centerTitle: true,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
+        ),
+      ),
+      navigationBarTheme: NavigationBarThemeData(
+        indicatorShape: const StadiumBorder(),
+        height: 80,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+      ),
+      navigationRailTheme: NavigationRailThemeData(
+        indicatorShape: const StadiumBorder(),
+      ),
+      tabBarTheme: TabBarThemeData(
+        indicatorSize: TabBarIndicatorSize.tab,
+        indicator: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          color: darkColorScheme.secondaryContainer,
+        ),
+        labelColor: darkColorScheme.onSecondaryContainer,
+        unselectedLabelColor: darkColorScheme.onSurfaceVariant,
+      ),
       cardTheme: CardThemeData(
         shape: _shapeTheme.roundedRectangle(
           topStart: CornerStyle.m,

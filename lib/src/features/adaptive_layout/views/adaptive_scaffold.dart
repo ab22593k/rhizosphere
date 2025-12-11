@@ -49,10 +49,11 @@ class NavigationSuiteScaffold extends ConsumerWidget {
               body: Row(
                 children: [
                   NavigationRail(
+                    extended: false,
                     selectedIndex: selectedIndex,
                     onDestinationSelected: onDestinationSelected,
                     destinations: railDestinations,
-                    labelType: NavigationRailLabelType.none, // Or selected
+                    labelType: NavigationRailLabelType.none,
                   ),
                   Expanded(child: body),
                 ],
@@ -63,10 +64,11 @@ class NavigationSuiteScaffold extends ConsumerWidget {
               appBar: appBar,
               body: Row(
                 children: [
-                  NavigationDrawer(
+                  NavigationRail(
+                    extended: true,
                     selectedIndex: selectedIndex,
                     onDestinationSelected: onDestinationSelected,
-                    children: drawerDestinations,
+                    destinations: railDestinations,
                   ),
                   Expanded(child: body),
                 ],

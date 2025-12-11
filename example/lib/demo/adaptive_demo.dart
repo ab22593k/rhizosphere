@@ -359,8 +359,9 @@ class _ItemsPaneState extends State<ItemsPane> {
           children: [
             Row(
               children: [
-                AccessibleHeader(text: 'Item Details', level: 1),
-                const Spacer(),
+                Expanded(
+                  child: AccessibleHeader(text: 'Item Details', level: 1),
+                ),
                 IconButton(
                   icon: const Icon(Icons.edit),
                   tooltip: 'Edit item',
