@@ -51,6 +51,7 @@ export 'src/core/adaptive/components/adaptive_fab.dart';
 export 'src/core/adaptive/components/adaptive_app_bar.dart';
 export 'src/features/adaptive_layout/views/adaptive_scaffold.dart';
 export 'src/features/adaptive_layout/widgets/responsive_pane.dart';
+export 'src/features/adaptive_layout/widgets/pane_drag_handle.dart';
 export 'src/features/adaptive_layout/providers/adaptive_layout_provider.dart';
 
 // Motion System

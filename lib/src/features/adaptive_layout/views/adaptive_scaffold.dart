@@ -12,6 +12,9 @@ class NavigationSuiteScaffold extends ConsumerWidget {
   final List<NavigationDestination> destinations;
   final List<NavigationRailDestination> railDestinations;
   final PreferredSizeWidget? appBar;
+  final Widget? navigationRailLeading;
+  final Widget? navigationRailTrailing;
+  final Widget? floatingActionButton;
 
   const NavigationSuiteScaffold({
     required this.body,
@@ -20,6 +23,9 @@ class NavigationSuiteScaffold extends ConsumerWidget {
     required this.destinations,
     required this.railDestinations,
     this.appBar,
+    this.navigationRailLeading,
+    this.navigationRailTrailing,
+    this.floatingActionButton,
     super.key,
   });
 
@@ -35,6 +41,7 @@ class NavigationSuiteScaffold extends ConsumerWidget {
             return Scaffold(
               appBar: appBar,
               body: body,
+              floatingActionButton: floatingActionButton,
               bottomNavigationBar: NavigationBar(
                 selectedIndex: selectedIndex,
                 onDestinationSelected: onDestinationSelected,
@@ -44,6 +51,7 @@ class NavigationSuiteScaffold extends ConsumerWidget {
           case WindowSizeClass.medium:
             return Scaffold(
               appBar: appBar,
+              floatingActionButton: floatingActionButton,
               body: Row(
                 children: [
                   NavigationRail(
@@ -51,7 +59,9 @@ class NavigationSuiteScaffold extends ConsumerWidget {
                     selectedIndex: selectedIndex,
                     onDestinationSelected: onDestinationSelected,
                     destinations: railDestinations,
-                    labelType: NavigationRailLabelType.none,
+                    leading: navigationRailLeading,
+                    trailing: navigationRailTrailing,
+                    labelType: NavigationRailLabelType.all,
                   ),
                   Expanded(child: body),
                 ],
@@ -60,6 +70,7 @@ class NavigationSuiteScaffold extends ConsumerWidget {
           case WindowSizeClass.expanded:
             return Scaffold(
               appBar: appBar,
+              floatingActionButton: floatingActionButton,
               body: Row(
                 children: [
                   NavigationRail(
@@ -67,6 +78,8 @@ class NavigationSuiteScaffold extends ConsumerWidget {
                     selectedIndex: selectedIndex,
                     onDestinationSelected: onDestinationSelected,
                     destinations: railDestinations,
+                    leading: navigationRailLeading,
+                    trailing: navigationRailTrailing,
                   ),
                   Expanded(child: body),
                 ],

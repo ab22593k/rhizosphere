@@ -29,7 +29,7 @@ class NavigationStrategy {
           sizeClass: sizeClass,
           type: NavigationType.navigationRail,
           railWidth: 80,
-          showLabels: false,
+          showLabels: true,
           extendedRail: false,
         );
       case WindowSizeClass.expanded:
