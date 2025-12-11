@@ -51,7 +51,7 @@ class _ComprehensiveAdaptiveDemoState
       },
       destinations: _buildDestinations(),
       railDestinations: _buildRailDestinations(),
-      drawerDestinations: _buildDrawerDestinations(),
+
       body: _buildBody(),
     );
   }
@@ -88,27 +88,6 @@ class _ComprehensiveAdaptiveDemoState
       NavigationRailDestination(
         icon: Icon(Icons.table_chart),
         label: Text('Table'),
-      ),
-    ];
-  }
-
-  List<Widget> _buildDrawerDestinations() {
-    return const [
-      NavigationDrawerDestination(
-        icon: Icon(Icons.grid_view),
-        label: Text('Grid Layout Demo'),
-      ),
-      NavigationDrawerDestination(
-        icon: Icon(Icons.view_list),
-        label: Text('List Layout Demo'),
-      ),
-      NavigationDrawerDestination(
-        icon: Icon(Icons.account_tree),
-        label: Text('Tree Layout Demo'),
-      ),
-      NavigationDrawerDestination(
-        icon: Icon(Icons.table_chart),
-        label: Text('Table Layout Demo'),
       ),
     ];
   }

@@ -11,7 +11,6 @@ class NavigationSuiteScaffold extends ConsumerWidget {
   final ValueChanged<int> onDestinationSelected;
   final List<NavigationDestination> destinations;
   final List<NavigationRailDestination> railDestinations;
-  final List<Widget> drawerDestinations;
   final PreferredSizeWidget? appBar;
 
   const NavigationSuiteScaffold({
@@ -20,7 +19,6 @@ class NavigationSuiteScaffold extends ConsumerWidget {
     required this.onDestinationSelected,
     required this.destinations,
     required this.railDestinations,
-    required this.drawerDestinations,
     this.appBar,
     super.key,
   });
@@ -101,7 +99,7 @@ class _AdaptiveScaffoldState extends ConsumerState<AdaptiveScaffold> {
       },
       destinations: [],
       railDestinations: [],
-      drawerDestinations: [],
+
       body: Container(),
     );
   }

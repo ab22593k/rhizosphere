@@ -122,31 +122,6 @@ class _AdaptiveDemoState extends ConsumerState<AdaptiveDemo> {
         ),
       ],
 
-      // Navigation drawer destinations (expanded screens)
-      drawerDestinations: [
-        NavigationDrawerDestination(
-          icon: const Icon(Icons.dashboard),
-          label: const Text('Dashboard'),
-        ),
-        NavigationDrawerDestination(
-          icon: const Icon(Icons.list),
-          label: const Text('Items'),
-        ),
-        NavigationDrawerDestination(
-          icon: const Icon(Icons.settings),
-          label: Text('settingsLabel'),
-        ),
-        const NavigationDrawerDestination(
-          icon: Icon(Icons.help),
-          label: Text('Help'),
-        ),
-        const Divider(),
-        NavigationDrawerDestination(
-          icon: const Icon(Icons.logout),
-          label: Text('signOut'),
-        ),
-      ],
-
       // Example 3: Dynamic body content based on selection
       body: _buildBody(_selectedIndex),
     );
@@ -586,7 +561,7 @@ class HelpPane extends StatelessWidget {
                 const SizedBox(height: 12),
                 const Text('• Compact screens: Bottom navigation bar'),
                 const Text('• Medium screens: Side navigation rail'),
-                const Text('• Expanded screens: Navigation drawer'),
+                const Text('• Expanded screens: Expanded navigation rail'),
                 const SizedBox(height: 16),
                 const Text(
                   'This ensures optimal navigation experience across all device types.',
