@@ -26,11 +26,11 @@ class ShapeTheme extends ThemeExtension<ShapeTheme> {
 
   /// Returns a [BorderRadius] for the given [style].
   ///
-  /// If [style] is [CornerStyle.full], this returns a large value (9999)
-  /// to simulate a stadium border when applied to a RoundedRectangleBorder.
+  /// If [style] is [CornerStyle.full], this returns [double.infinity]
+  /// to create a stadium border when applied to a RoundedRectangleBorder.
   BorderRadius borderRadius(CornerStyle style) {
-    if (style == CornerStyle.full) {
-      return BorderRadius.circular(9999);
+    if (style.isFull) {
+      return BorderRadius.circular(double.infinity);
     }
     return BorderRadius.circular(cornerStyles[style] ?? 0.0);
   }

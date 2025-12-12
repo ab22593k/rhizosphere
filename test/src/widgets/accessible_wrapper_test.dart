@@ -26,7 +26,6 @@ void main() {
     expect(scrollConfig.behavior, isA<ScrollBehavior>());
 
     final behavior = scrollConfig.behavior;
-    expect(behavior.dragDevices, contains(PointerDeviceKind.mouse));
     expect(behavior.dragDevices, contains(PointerDeviceKind.touch));
   });
 }

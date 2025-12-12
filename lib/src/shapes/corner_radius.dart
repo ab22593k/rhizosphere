@@ -15,12 +15,13 @@ class CornerRadius {
     CornerStyle.xl: 24.0,
     CornerStyle.xl_increased: 32.0,
     CornerStyle.xxl: 40.0,
-    CornerStyle.full: -1.0, // Handled dynamically
+    CornerStyle.full: double.infinity,
   };
 
   /// Gets the radius value for a given [CornerStyle].
   ///
-  /// Returns -1.0 for [CornerStyle.full].
+  /// Returns [double.infinity] for [CornerStyle.full], indicating a stadium
+  /// border where the radius should be computed as height/2.
   static double getValue(CornerStyle style) {
     return values[style] ?? 0.0;
   }

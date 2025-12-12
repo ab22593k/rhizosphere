@@ -15,7 +15,10 @@ void main() {
     test('borderRadius returns correct radius', () {
       final theme = ShapeTheme.defaults;
       expect(theme.borderRadius(CornerStyle.s), BorderRadius.circular(8.0));
-      expect(theme.borderRadius(CornerStyle.full), BorderRadius.circular(9999));
+      expect(
+        theme.borderRadius(CornerStyle.full),
+        BorderRadius.circular(double.infinity),
+      );
     });
 
     test('copyWith updates values', () {

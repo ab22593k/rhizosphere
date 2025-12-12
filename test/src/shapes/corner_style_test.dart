@@ -13,7 +13,7 @@ void main() {
       expect(CornerStyle.xl.value, 24.0);
       expect(CornerStyle.xl_increased.value, 32.0);
       expect(CornerStyle.xxl.value, 40.0);
-      expect(CornerStyle.full.value, -1.0);
+      expect(CornerStyle.full.value, double.infinity);
     });
 
     test('isFull getter works correctly', () {

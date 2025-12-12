@@ -33,14 +33,16 @@ enum CornerStyle {
 
   /// Dynamic - Fully Rounded (Stadium)
   ///
-  /// This value represents height/2 for stadium borders.
-  full(-1.0);
+  /// Uses [double.infinity] to indicate that the radius should be
+  /// computed dynamically as height/2 for stadium borders.
+  full(double.infinity);
 
   const CornerStyle(this.value);
 
   /// The raw corner radius value in logical pixels.
   ///
-  /// For [CornerStyle.full], this returns -1.0 and should be handled dynamically.
+  /// For [CornerStyle.full], this returns [double.infinity] to indicate
+  /// a stadium border where the radius is computed as height/2.
   final double value;
 
   /// Whether this style represents a fully rounded (stadium) shape.
