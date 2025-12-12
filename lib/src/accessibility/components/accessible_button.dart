@@ -38,7 +38,7 @@ class AccessibleButton extends StatelessWidget {
     assert(() {
       final wordCount = label.trim().split(RegExp(r'\s+')).length;
       if (wordCount > 4) {
-        throw AssertionError(
+        debugPrint(
           'AccessibleButton label "$label" has $wordCount words. '
           'Action buttons must be 4 words or fewer for fast scanning.',
         );

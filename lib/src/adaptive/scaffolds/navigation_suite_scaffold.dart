@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../layout/layout_tokens.dart';
 import '../layout/window_size_class.dart';
 import '../state/window_size_class_provider.dart';
 
@@ -81,19 +82,19 @@ class _NavigationSuiteScaffoldState
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Custom left panel: Menu + FAB + NavigationRail
-          // Using IntrinsicWidth to constrain width based on NavigationRail
           SizedBox(
             child: Container(
-              // M3: md.comp.nav-rail.collapsed.container.color = #FEF7FF
               color: Theme.of(context).colorScheme.surface,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // M3: md.comp.nav-rail.collapsed.top-space = 44dp
-                  const SizedBox(height: 44),
+                  // Top space for navigation rail
+                  const SizedBox(height: LayoutTokens.navigationRailTopSpace),
                   // Menu Button to toggle expansion
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: LayoutTokens.navigationRailHorizontalPadding,
+                    ),
                     child: IconButton(
                       icon: Icon(extended ? Icons.menu_open : Icons.menu),
                       onPressed: () {
@@ -104,12 +105,17 @@ class _NavigationSuiteScaffoldState
                       tooltip: extended ? 'Collapse menu' : 'Expand menu',
                     ),
                   ),
-                  // M3: Vertical spacing between menu and FAB
-                  const SizedBox(height: 8),
+                  // Vertical spacing between menu and FAB
+                  const SizedBox(
+                    height: LayoutTokens.navigationRailMenuFabSpacing,
+                  ),
                   // Floating Action Button
                   if (widget.floatingActionButton != null) ...[
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal:
+                            LayoutTokens.navigationRailHorizontalPadding,
+                      ),
                       child: Theme(
                         data: Theme.of(context).copyWith(
                           floatingActionButtonTheme:
@@ -118,13 +124,18 @@ class _NavigationSuiteScaffoldState
                         child: widget.floatingActionButton!,
                       ),
                     ),
-                    // M3: md.comp.nav-rail.expanded.vertical.trailing-space = 20dp
-                    const SizedBox(height: 20),
+                    // Trailing space after FAB
+                    const SizedBox(
+                      height: LayoutTokens.navigationRailFabTrailingSpace,
+                    ),
                   ],
                   // Custom leading widget
                   if (widget.navigationRailLeading != null)
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal:
+                            LayoutTokens.navigationRailHorizontalPadding,
+                      ),
                       child: widget.navigationRailLeading!,
                     ),
                   // Navigation Rail (destinations only, no leading)
@@ -134,8 +145,9 @@ class _NavigationSuiteScaffoldState
                       selectedIndex: widget.selectedIndex,
                       onDestinationSelected: widget.onDestinationSelected,
                       destinations: widget.railDestinations,
-                      minWidth: 80,
-                      minExtendedWidth: 220,
+                      minWidth: LayoutTokens.navigationRailMinWidth,
+                      minExtendedWidth:
+                          LayoutTokens.navigationRailMinExtendedWidth,
                       groupAlignment: sizeClass == WindowSizeClass.medium
                           ? 0.0
                           : -1.0,
@@ -149,7 +161,10 @@ class _NavigationSuiteScaffoldState
             ),
           ),
           // Use a divider to separate rail from content
-          const VerticalDivider(thickness: 1, width: 1),
+          const VerticalDivider(
+            thickness: LayoutTokens.navigationRailDividerWidth,
+            width: LayoutTokens.navigationRailDividerWidth,
+          ),
           Expanded(child: widget.body),
         ],
       ),

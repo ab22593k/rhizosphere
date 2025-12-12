@@ -58,6 +58,7 @@ export 'src/adaptive/layout/window_size_class.dart';
 export 'src/adaptive/layout/adaptive_builder.dart';
 export 'src/adaptive/layout/navigation_strategy.dart';
 export 'src/adaptive/layout/pane_configuration.dart';
+export 'src/adaptive/layout/layout_tokens.dart';
 
 // Adaptive Widgets
 export 'src/adaptive/widgets/adaptive_fab.dart';
