@@ -82,7 +82,7 @@ class _NavigationSuiteScaffoldState
         children: [
           // Custom left panel: Menu + FAB + NavigationRail
           // Using IntrinsicWidth to constrain width based on NavigationRail
-          IntrinsicWidth(
+          SizedBox(
             child: Container(
               // M3: md.comp.nav-rail.collapsed.container.color = #FEF7FF
               color: Theme.of(context).colorScheme.surface,

@@ -37,7 +37,7 @@ export 'src/accessibility/components/gesture_handler.dart';
 
 // Theme
 export 'src/theme/app_theme.dart';
-export 'src/theme/scroll/rhizosphere_scroll_behavior.dart';
+export 'src/theme/scroll/scroll_behavior.dart';
 
 // Data Models
 export 'src/data/navigation_item.dart';

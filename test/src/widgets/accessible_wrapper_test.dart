@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide ScrollBehavior;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rhizosphere/src/accessibility/widgets/accessible_wrapper.dart';
-import 'package:rhizosphere/src/theme/scroll/rhizosphere_scroll_behavior.dart';
+import 'package:rhizosphere/src/theme/scroll/scroll_behavior.dart';
 
 void main() {
   testWidgets('AccessibleWrapper applies RhizosphereScrollBehavior', (
@@ -23,7 +23,7 @@ void main() {
       ),
     );
 
-    expect(scrollConfig.behavior, isA<RhizosphereScrollBehavior>());
+    expect(scrollConfig.behavior, isA<ScrollBehavior>());
 
     final behavior = scrollConfig.behavior;
     expect(behavior.dragDevices, contains(PointerDeviceKind.mouse));

@@ -6,13 +6,12 @@ import 'package:flutter/material.dart';
 ///
 /// This behavior is applied globally via [AccessibleWrapper] to ensure
 /// a consistent and accessible scrolling experience across all platforms.
-class RhizosphereScrollBehavior extends MaterialScrollBehavior {
-  const RhizosphereScrollBehavior();
+class ScrollBehavior extends MaterialScrollBehavior {
+  const ScrollBehavior();
 
   @override
   Set<PointerDeviceKind> get dragDevices => {
     PointerDeviceKind.touch,
-    PointerDeviceKind.mouse,
     PointerDeviceKind.stylus,
     PointerDeviceKind.trackpad,
     PointerDeviceKind.invertedStylus,
