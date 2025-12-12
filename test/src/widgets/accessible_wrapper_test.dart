@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rhizosphere/src/widgets/accessible_wrapper.dart';
-import 'package:rhizosphere/src/config/rhizosphere_scroll_behavior.dart';
+import 'package:rhizosphere/src/accessibility/widgets/accessible_wrapper.dart';
+import 'package:rhizosphere/src/theme/scroll/rhizosphere_scroll_behavior.dart';
 
 void main() {
   testWidgets('AccessibleWrapper applies RhizosphereScrollBehavior', (

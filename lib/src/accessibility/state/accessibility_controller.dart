@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../models/accessibility_config.dart';
+import 'accessibility_settings.dart';
 
 class AccessibilityNotifier extends Notifier<AccessibilityConfig> {
   @override

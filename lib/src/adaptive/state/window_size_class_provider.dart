@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
-import '../../../core/adaptive/layout/window_size_class.dart';
-import '../../../core/adaptive/layout/navigation_strategy.dart';
-import '../../../core/adaptive/layout/pane_configuration.dart';
+import '../layout/window_size_class.dart';
+import '../layout/navigation_strategy.dart';
+import '../layout/pane_configuration.dart';
 
 class WindowSizeClassNotifier extends StateNotifier<WindowSizeClass> {
   WindowSizeClassNotifier() : super(WindowSizeClass.compact);

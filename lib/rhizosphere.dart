@@ -10,49 +10,66 @@
 /// - Shortcuts: Implements keyboard shortcuts using `Shortcuts` and `Actions`.
 library;
 
-export 'src/config/accessibility_config.dart';
-export 'src/config/rhizosphere_scroll_behavior.dart';
-export 'src/config/text_scaler.dart';
-export 'src/providers/theme_provider.dart';
-export 'src/widgets/accessible_wrapper.dart';
-export 'src/widgets/live_announcer.dart';
-export 'src/components/accessible_button.dart';
-export 'src/components/accessible_text_field.dart';
-export 'src/components/gesture_handler.dart';
+// Accessibility - State
+export 'src/accessibility/state/accessibility_settings.dart';
+export 'src/accessibility/state/accessibility_controller.dart';
 
-// New Accessibility Hierarchy Exports
-export 'src/data/app_theme.dart';
+// Accessibility - Utils
+export 'src/accessibility/utils/text_scaler.dart';
+export 'src/accessibility/utils/accessibility_extensions.dart';
+export 'src/accessibility/utils/contrast_checker.dart';
+export 'src/accessibility/utils/truncation_handler.dart';
+export 'src/accessibility/utils/accessibility_helpers.dart';
+
+// Accessibility - Widgets
+export 'src/accessibility/widgets/accessible_wrapper.dart';
+export 'src/accessibility/widgets/live_announcer.dart';
+export 'src/accessibility/widgets/accessible_image.dart';
+export 'src/accessibility/widgets/accessible_text.dart';
+export 'src/accessibility/widgets/expandable_truncated_text.dart';
+export 'src/accessibility/widgets/dynamic_tooltip_label.dart';
+export 'src/accessibility/widgets/image_caption.dart';
+
+// Accessibility - Components
+export 'src/accessibility/components/accessible_button.dart';
+export 'src/accessibility/components/accessible_text_field.dart';
+export 'src/accessibility/components/gesture_handler.dart';
+
+// Theme
+export 'src/theme/app_theme.dart';
+export 'src/theme/scroll/rhizosphere_scroll_behavior.dart';
+
+// Data Models
 export 'src/data/navigation_item.dart';
 export 'src/data/intents.dart';
+
+// Presentation - ViewModels
 export 'src/presentation/viewmodels/accessibility_viewmodel.dart';
+
+// Presentation - Views
 export 'src/presentation/views/base_layout.dart';
 export 'src/presentation/views/hierarchy_view.dart';
 export 'src/presentation/views/shortcuts_help_view.dart';
 export 'src/presentation/views/components/accessible_header.dart';
 export 'src/presentation/views/components/accessible_card.dart';
 
-// New Accessible Widgets Exports
-export 'src/presentation/accessible_image.dart';
-export 'src/presentation/accessible_text.dart';
-export 'src/presentation/expandable_truncated_text.dart';
-export 'src/presentation/dynamic_tooltip_label.dart';
-export 'src/presentation/image_caption.dart';
-export 'src/presentation/utils/accessibility_extensions.dart';
-export 'src/presentation/utils/contrast_checker.dart';
-export 'src/presentation/utils/truncation_handler.dart';
-export 'src/presentation/utils/accessibility_helpers.dart';
-
 // Adaptive Layout System
-export 'src/core/adaptive/layout/window_size_class.dart';
-export 'src/core/adaptive/layout/adaptive_builder.dart';
-export 'src/core/adaptive/layout/navigation_strategy.dart';
-export 'src/core/adaptive/layout/pane_configuration.dart';
-export 'src/core/adaptive/components/adaptive_fab.dart';
-export 'src/core/adaptive/components/adaptive_app_bar.dart';
-export 'src/features/adaptive_layout/views/adaptive_scaffold.dart';
-export 'src/features/adaptive_layout/widgets/responsive_pane.dart';
-export 'src/features/adaptive_layout/widgets/pane_drag_handle.dart';
-export 'src/features/adaptive_layout/providers/adaptive_layout_provider.dart';
+export 'src/adaptive/layout/window_size_class.dart';
+export 'src/adaptive/layout/adaptive_builder.dart';
+export 'src/adaptive/layout/navigation_strategy.dart';
+export 'src/adaptive/layout/pane_configuration.dart';
+
+// Adaptive Widgets
+export 'src/adaptive/widgets/adaptive_fab.dart';
+export 'src/adaptive/widgets/adaptive_app_bar.dart';
+export 'src/adaptive/widgets/three_pane_layout.dart';
+export 'src/adaptive/widgets/pane_drag_handle.dart';
+
+// Adaptive Scaffolds
+export 'src/adaptive/scaffolds/navigation_suite_scaffold.dart';
+
+// Adaptive State
+export 'src/adaptive/state/window_size_class_provider.dart';
 
 // Motion System
 export 'src/motion/motion_scheme.dart';

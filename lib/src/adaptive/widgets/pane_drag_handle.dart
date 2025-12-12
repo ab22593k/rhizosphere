@@ -122,9 +122,12 @@ class _PaneDragHandleState extends State<PaneDragHandle> {
     widget.onDrag(targetWidth);
   }
 
-  void _handleKeyEvent(KeyEvent event) {
-    if (event is! KeyDownEvent) return;
+  /// Handles key events for pane resizing.
+  /// Returns true if the event was handled, false otherwise.
+  bool _handleKeyEvent(KeyEvent event) {
+    if (event is! KeyDownEvent) return false;
 
+    // Handle arrow keys for resizing
     double delta = 0;
     if (widget.isHorizontal) {
       if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
@@ -146,13 +149,18 @@ class _PaneDragHandleState extends State<PaneDragHandle> {
         widget.maxPaneWidth,
       );
       widget.onDrag(newWidth);
+      return true;
     }
 
-    // Space or Enter to snap
+    // Space or Enter to snap to next width
     if (event.logicalKey == LogicalKeyboardKey.space ||
         event.logicalKey == LogicalKeyboardKey.enter) {
       _handleTap();
+      return true;
     }
+
+    // Return false for all other keys (Tab, Escape, etc.) to allow traversal
+    return false;
   }
 
   @override
@@ -188,8 +196,8 @@ class _PaneDragHandleState extends State<PaneDragHandle> {
           });
         },
         onKeyEvent: (node, event) {
-          _handleKeyEvent(event);
-          return KeyEventResult.handled;
+          final handled = _handleKeyEvent(event);
+          return handled ? KeyEventResult.handled : KeyEventResult.ignored;
         },
         child: MouseRegion(
           cursor: widget.isHorizontal

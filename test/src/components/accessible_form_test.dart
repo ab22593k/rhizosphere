@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/src/components/accessible_text_field.dart';
+import 'package:rhizosphere/src/accessibility/components/accessible_text_field.dart';
 
 void main() {
   testWidgets('AccessibleTextField has semantic label and hint', (

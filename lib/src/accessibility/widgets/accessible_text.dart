@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'utils/contrast_checker.dart';
-import 'utils/truncation_handler.dart';
+import '../utils/contrast_checker.dart';
+import '../utils/truncation_handler.dart';
 
 class AccessibleText extends StatelessWidget {
   final String text;

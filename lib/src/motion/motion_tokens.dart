@@ -60,11 +60,28 @@ class MotionTokens {
   static const SpringDescription standardDefaultEffects =
       expressiveDefaultEffects;
   static const SpringDescription standardSlowEffects = expressiveSlowEffects;
+
+  // Reduced Motion Scheme
+  // Very high stiffness + critical damping = near-instant animations
+  // Respects platform "Reduce Motion" accessibility setting
+  static const SpringDescription reducedMotion = SpringDescription(
+    mass: 1.0,
+    stiffness: 10000.0, // Very stiff for near-instant motion
+    damping: 200.0, // Critically damped (no oscillation)
+  );
 }
 
 extension MotionSchemeResolver on MotionScheme {
+  /// Resolves to the appropriate spring based on scheme, speed, and type.
+  ///
+  /// When [MotionScheme.reduced] is used, returns a near-instant spring
+  /// regardless of speed and type, respecting accessibility settings.
   SpringDescription resolve(MotionSpeed speed, MotionType type) {
     switch (this) {
+      case MotionScheme.reduced:
+        // For reduced motion, always return near-instant spring
+        return MotionTokens.reducedMotion;
+
       case MotionScheme.expressive:
         switch (type) {
           case MotionType.spatial:

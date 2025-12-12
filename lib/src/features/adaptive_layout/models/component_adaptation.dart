@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/adaptive/layout/window_size_class.dart';
+import '../../../adaptive/layout/window_size_class.dart';
 
 enum ComponentType {
   floatingActionButton,

@@ -54,12 +54,29 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             children: [
               AccessibleHeader(text: 'Welcome to appTitle', level: 1),
               const SizedBox(height: 20),
-              // Demonstrate AccessibleImage
-              const AccessibleImage(
-                image: AssetImage('assets/placeholder.png'),
-                semanticsLabel:
-                    'Placeholder image demonstrating accessibility caption positioning',
-                caption: 'Accessible image with caption',
+              // Placeholder image demonstration (no network needed)
+              Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.image,
+                      size: 64,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Accessible image placeholder',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
               // Demonstrate Localized Button (Positive Outcome)
@@ -120,7 +137,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
               const SizedBox(height: 20),
               if (_announcement.isNotEmpty)
-                LiveAnnouncer(
+                LiveAnnouncerWidget(
                   message: _announcement,
                   child: Text(_announcement),
                 ),

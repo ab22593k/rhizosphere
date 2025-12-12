@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../config/rhizosphere_scroll_behavior.dart';
-import '../config/text_scaler.dart';
-import '../providers/theme_provider.dart';
+import '../../theme/scroll/rhizosphere_scroll_behavior.dart';
+import '../utils/text_scaler.dart';
+import '../state/accessibility_controller.dart';
 
 /// A root-level wrapper that injects accessibility overrides into the widget tree.
 ///

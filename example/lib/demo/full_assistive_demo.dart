@@ -56,8 +56,8 @@ class _FullAssistiveDemoState extends State<FullAssistiveDemo> {
                   border: Border.all(color: Theme.of(context).dividerColor),
                   borderRadius: BorderRadius.circular(8),
                 ),
-                // LiveAnnouncer: Triggers WCAG 4.1.3 status updates without moving focus.
-                child: LiveAnnouncer(
+                // LiveAnnouncerWidget: Triggers WCAG 4.1.3 status updates without moving focus.
+                child: LiveAnnouncerWidget(
                   message: _status,
                   child: Row(
                     children: [

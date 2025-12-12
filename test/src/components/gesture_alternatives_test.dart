@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/src/components/gesture_handler.dart';
+import 'package:rhizosphere/src/accessibility/components/gesture_handler.dart';
 
 void main() {
   testWidgets('GestureHandler accepts tap and long press alternatives', (

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/src/data/app_theme.dart';
+import 'package:rhizosphere/src/theme/app_theme.dart';
 import 'package:rhizosphere/src/shapes/shape_theme.dart';
 
 void main() {

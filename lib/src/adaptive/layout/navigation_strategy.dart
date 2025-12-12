@@ -38,7 +38,7 @@ class NavigationStrategy {
           type: NavigationType.navigationRail,
           railWidth: 250,
           showLabels: true,
-          extendedRail: true,
+          extendedRail: false,
         );
     }
   }

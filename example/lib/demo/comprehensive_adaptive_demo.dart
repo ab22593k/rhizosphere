@@ -24,6 +24,7 @@ class _ComprehensiveAdaptiveDemoState
       // The image implies the search is part of the content pane.
       navigationRailLeading: Column(
         mainAxisSize: MainAxisSize.min,
+
         children: [
           FloatingActionButton(
             elevation: 0,
@@ -184,15 +185,7 @@ class _MailLayoutDemoState extends State<MailLayoutDemo> {
           child: SearchBar(
             leading: const Icon(Icons.search),
             hintText: 'Search replies',
-            trailing: [
-              CircleAvatar(
-                radius: 16,
-                backgroundImage: const NetworkImage(
-                  'https://ui-avatars.com/api/?name=User&background=0D8ABC',
-                ),
-                child: const Text('U'),
-              ),
-            ],
+            trailing: [CircleAvatar(radius: 16, child: const Text('U'))],
             elevation: WidgetStateProperty.all(0),
             backgroundColor: WidgetStateProperty.all(
               Theme.of(context).colorScheme.surfaceContainerHighest,

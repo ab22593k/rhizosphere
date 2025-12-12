@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/adaptive/layout/adaptive_builder.dart';
-import '../../../core/adaptive/layout/pane_configuration.dart';
+import '../layout/adaptive_builder.dart';
+import '../layout/pane_configuration.dart';
 import 'pane_drag_handle.dart';
 
 class ThreePaneLayout extends StatefulWidget {
@@ -100,13 +100,14 @@ class _ThreePaneLayoutState extends State<ThreePaneLayout> {
                         child: widget.supportingPane,
                       ),
 
-                    // Primary Pane (resizable)
-                    SizedBox(
-                      width: hasDetail ? _primaryPaneWidth : null,
-                      child: hasDetail
-                          ? widget.primaryPane
-                          : Expanded(child: widget.primaryPane),
-                    ),
+                    // Primary Pane (resizable when detail is visible, expanded otherwise)
+                    if (hasDetail)
+                      SizedBox(
+                        width: _primaryPaneWidth,
+                        child: widget.primaryPane,
+                      )
+                    else
+                      Expanded(child: widget.primaryPane),
 
                     // Drag Handle
                     if (showHandle)

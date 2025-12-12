@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:rhizosphere/src/components/accessible_button.dart';
+import 'package:rhizosphere/src/accessibility/components/accessible_button.dart';
 
 void main() {
   testWidgets('Button labels performance (length check)', (

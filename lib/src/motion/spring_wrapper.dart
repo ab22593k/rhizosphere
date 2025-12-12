@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
+import 'motion_adaptive.dart';
+import 'motion_tokens.dart';
 
 /// A wrapper around [AnimationController] to facilitate spring animations.
 
@@ -25,12 +27,22 @@ class SpringAnimation {
   ///
   /// If [velocity] is not provided, the current velocity of the controller is used
   /// to ensure smooth transitions (handling retargeting/interruption).
+  ///
+  /// If [reduceMotion] is true, the animation completes instantly.
   TickerFuture animateTo(
     double target,
     SpringDescription spring, {
     double? velocity,
+    bool reduceMotion = false,
   }) {
     _target = target;
+
+    // If reduced motion is requested, jump to target instantly
+    if (reduceMotion) {
+      controller.value = target;
+      return TickerFuture.complete();
+    }
+
     final simulation = SpringSimulation(
       spring,
       controller.value,
@@ -42,8 +54,12 @@ class SpringAnimation {
 
   /// Retargets the in-flight animation with new spring parameters.
   /// Preserves current value, velocity, and target for instant switching.
-  void retarget(SpringDescription newSpring) {
+  void retarget(SpringDescription newSpring, {bool reduceMotion = false}) {
     if (_target != null) {
+      if (reduceMotion) {
+        controller.value = _target!;
+        return;
+      }
       controller.animateWith(
         SpringSimulation(
           newSpring,
@@ -60,6 +76,9 @@ class SpringAnimation {
 ///
 /// Replaces the standard [AnimatedBuilder] usage when simple spring-based
 /// transition to a target value is needed.
+///
+/// Automatically respects platform "Reduce Motion" accessibility settings.
+/// When reduced motion is enabled, animations complete instantly.
 class SpringBuilder extends StatefulWidget {
   final double value;
   final SpringDescription spring;
@@ -67,12 +86,17 @@ class SpringBuilder extends StatefulWidget {
   builder;
   final Widget? child;
 
+  /// If true, ignores platform reduce motion setting.
+  /// Use sparingly - only for essential motion that conveys meaning.
+  final bool ignoreReduceMotion;
+
   const SpringBuilder({
     super.key,
     required this.value,
     required this.spring,
     required this.builder,
     this.child,
+    this.ignoreReduceMotion = false,
   });
 
   @override
@@ -94,10 +118,19 @@ class _SpringBuilderState extends State<SpringBuilder>
   @override
   void didUpdateWidget(SpringBuilder oldWidget) {
     super.didUpdateWidget(oldWidget);
+
+    // Check if we should reduce motion
+    final reduceMotion =
+        !widget.ignoreReduceMotion &&
+        MotionAdaptive.shouldReduceMotion(context);
+
     if (oldWidget.value != widget.value) {
-      _springAnim.animateTo(widget.value, widget.spring);
+      // Use reduced motion spring if platform requests it
+      final spring = reduceMotion ? MotionTokens.reducedMotion : widget.spring;
+      _springAnim.animateTo(widget.value, spring, reduceMotion: reduceMotion);
     } else if (oldWidget.spring != widget.spring) {
-      _springAnim.retarget(widget.spring);
+      final spring = reduceMotion ? MotionTokens.reducedMotion : widget.spring;
+      _springAnim.retarget(spring, reduceMotion: reduceMotion);
     }
   }
 
